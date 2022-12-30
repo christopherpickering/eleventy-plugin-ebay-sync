@@ -1,0 +1,59 @@
+{
+  "name": "eleventy-plugin-ebay-sync",
+  "version": "1.0.0",
+  "description": "Eleventy plugin to sync products from an 11ty store to eBay.",
+  "main": "index.js",
+  "scripts": {
+    "format": "prettier --config .prettierrc \"**/*.{ts,css,less,scss,js,json,md,yaml,html}\" --write",
+    "pre-commit": "lint-staged",
+    "commit": "git add . && npm run pre-commit && git add . && cz --no-verify",
+    "test": "xo"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/christopherpickering/eleventy-plugin-ebay-sync.git"
+  },
+  "keywords": [
+    "eBay",
+    "eleveny",
+    "11ty"
+  ],
+  "author": {
+    "name": "Christopher Pickering",
+    "url": "https://going.bg"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/christopherpickering/eleventy-plugin-ebay-sync/issues"
+  },
+  "homepage": "https://github.com/christopherpickering/eleventy-plugin-ebay-sync#readme",
+  "devDependencies": {
+    "@semantic-release/changelog": "6.0.2",
+    "@semantic-release/commit-analyzer": "9.0.2",
+    "@semantic-release/exec": "6.0.3",
+    "@semantic-release/git": "10.0.1",
+    "@semantic-release/github": "8.0.7",
+    "@semantic-release/npm": "9.0.1",
+    "@semantic-release/release-notes-generator": "10.0.3",
+    "cypress": "^12.2.0",
+    "cz-conventional-changelog": "3.3.0",
+    "lint-staged": "13.1.0",
+    "prettier": "^2.8.1",
+    "semantic-release": "19.0.5",
+    "xo": "0.53.1"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "lint-staged": {
+    "**/*.{ts,css,less,scss,js,json,md,yaml,html}": [
+      "npm run format"
+    ]
+  },
+  "xo": {
+    "space": true,
+    "prettier": true
+  }
+}
